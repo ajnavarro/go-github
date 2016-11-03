@@ -44,16 +44,16 @@ type User struct {
 	Plan              *Plan      `json:"plan,omitempty" bson:",omitempty"`
 
 	// API URLs
-	URL               *string `json:"url,omitempty" bson:",omitempty"`
-	EventsURL         *string `json:"events_url,omitempty" bson:",omitempty"`
-	FollowingURL      *string `json:"following_url,omitempty" bson:",omitempty"`
-	FollowersURL      *string `json:"followers_url,omitempty" bson:",omitempty"`
-	GistsURL          *string `json:"gists_url,omitempty" bson:",omitempty"`
-	OrganizationsURL  *string `json:"organizations_url,omitempty" bson:",omitempty"`
-	ReceivedEventsURL *string `json:"received_events_url,omitempty" bson:",omitempty"`
-	ReposURL          *string `json:"repos_url,omitempty" bson:",omitempty"`
-	StarredURL        *string `json:"starred_url,omitempty" bson:",omitempty"`
-	SubscriptionsURL  *string `json:"subscriptions_url,omitempty" bson:",omitempty"`
+	URL               *string `json:"url,omitempty" bson:"-"`
+	EventsURL         *string `json:"events_url,omitempty" bson:"-"`
+	FollowingURL      *string `json:"following_url,omitempty" bson:"-"`
+	FollowersURL      *string `json:"followers_url,omitempty" bson:"-"`
+	GistsURL          *string `json:"gists_url,omitempty" bson:"-"`
+	OrganizationsURL  *string `json:"organizations_url,omitempty" bson:"-"`
+	ReceivedEventsURL *string `json:"received_events_url,omitempty" bson:"-"`
+	ReposURL          *string `json:"repos_url,omitempty" bson:"-"`
+	StarredURL        *string `json:"starred_url,omitempty" bson:"-"`
+	SubscriptionsURL  *string `json:"subscriptions_url,omitempty" bson:"-"`
 
 	// TextMatches is only populated from search results that request text matches
 	// See: search.go and https://developer.github.com/v3/search/#text-match-metadata
